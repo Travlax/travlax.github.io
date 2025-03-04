@@ -1,0 +1,364 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* styles to devices with a maximum width of 600 pixels*/
+
+@media only screen and (max-width: 600px) {
+    /* Styles for smartphones */
+    body {
+        background-color:#aeddf0;
+    }
+}
+
+/* For devices with widths between 601 and 900 pixels, such as tablets,*/
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+    /* Styles for tablets */
+    body {
+        background-color: #aeddf0;
+    }
+}
+/*This applies to devices wider than 900 pixels,*/
+
+@media only screen and (min-width: 901px) {
+    /* Styles for laptops and desktops */
+    body {
+        background-color: #aeddf0;
+    }
+}
+
+/* About Us Hero Image properties* Main Sources Youtube, w3schools and frecodecamp and Class Instruction*/
+
+.hero-imageAbout img {
+    background-image: Navy;
+    width: 100%;
+    height: 15%;
+    Background-position: Center;
+    Background-repeat: no-repeat;
+    Background-size: cover; 
+    position: relative; 
+    
+    }
+
+    /*Hero Banner Text css*/
+    .hero-textAbout {
+        text-align: left;
+        position: absolute;
+        color: hotpink;
+        top: 50%;
+        left: 50%;
+    }
+
+/*Logog and nav information*/
+.nav_logo{
+    background-color: aquamarine;
+    color: rgb(10, 0, 0);
+    padding: 10px;
+    text-align: center;
+}
+.nav_logo a{
+    text-decoration: none;
+    color: rgb(126, 110, 110);
+}
+.nav_menu{
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+.nav_menu ul{
+    list-style-type: none;
+    padding: 0;
+}
+.nav_menu ul li{
+    display: inline;
+    padding: 10px;
+}
+.nav_menu ul li a{
+    text-decoration: none;
+    color: white;
+}
+/*Hero Image Container   */
+.hero-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+/*This  Adjusts the aspect ratio . I chose 16/9 */
+.hero-image {
+    width: 100%;
+    aspect-ratio: 16 / 9; 
+    background-image: url('Assets/Hero.jpg');
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease;
+}
+/*Hero container hover Css*/
+
+.hero-container:hover .hero-image {
+    transform: scale(1.1);
+}
+/*Main Content*/
+
+.main_content{
+    padding: 20px;
+}
+
+.header_container{
+    background-image: url('Assets/Stockholm.jpg');
+    background-size: cover;
+    background-position: center;
+    color: rgb(0, 7, 7);
+    padding: 20px;
+    text-align: center;
+    
+    /*Gallery Image Container header content area*/
+}
+.header_container h1{
+    font-size: 50px;
+}
+.tavels_container{
+    padding: 20px;
+}
+.section_container{
+    padding: 20px;
+}
+
+/*Cities Grid photo gallery*/
+
+.class_citiesGrid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.class_cityName{
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+}
+.class_cityName img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+/*Footer* Area properties*/
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: navy;
+}
+
+/*footer navigation position*/
+
+.footer nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer nav ul li a {
+    text-decoration: none;
+    color: #faf7f7;
+    font-weight: bold;
+}
+
+/*Footer links on hover */
+
+.footer nav ul li a:hover {
+    color: #f741d8;
+}
+
+
+/*Button Style properties*/
+
+button {
+    background-color: #000000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.5s ease;
+}
+
+/* Button before transition and transformation*/
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    transition: left 0.5s ease;
+}
+/*Button action on hover*/
+
+button:hover {
+    background-color: #f318bc;
+}
+/*Button before transition and transformation on hover*/
+
+button:hover::before {
+    left: 0;
+}
+
+/* Fundrasing Button*/
+.fundraiser {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000; /* Ensures the button is on top of other elements */
+}
+/* Fundraising Button double vibrate transformation*/
+.coffee-button {
+    display: inline-block;
+    font-size: 20px;
+    background-color: #ff9800;
+    color: white;
+    padding: 15px 25px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: transform 0.3s ease-in-out;
+}
+
+/*Fundraising on hover animation*/
+
+.coffee-button:hover {
+    animation: zoomTwice 0.6s ease-in-out;
+}
+
+@keyframes zoomTwice {
+    0%, 100% { transform: scale(1); }
+    25% { transform: scale(1.2); }
+    50% { transform: scale(1); }
+    75% { transform: scale(1.2); }
+}
+
+/* Lower Page Banner Gif properties*/
+
+.section_banner > .section_container img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover; /* Ensures the image covers the container while maintaining aspect ratio */
+    transition: transform 0.5s ease;
+}
+
+/* gif transform function*/
+
+.section_banner > .section_container img:hover {
+    transform: scale(1.1); /* Scales the image to 110% on hover */
+}
+
+/*QUick Link/sitemap*/
+.quick-links {
+    width: 250px;
+
+}
+
+/* Quick Link Styling */
+.quick_link {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.quick_link a {
+    background-color: rgb(252, 249, 250);
+    color: rgb(255, 238, 2);
+    padding: 10px;
+    text-decoration: none;
+    width: 100%;
+    text-align: left;
+    border-bottom: 1px solid #555555;
+    transition: background-color 0.5s;
+}
+
+.quick_link a:hover {
+    background-color: #b5ff07;
+}
+
+.quick_link a.active {
+    background-color: #02f84c;
+    color: white;
+}
+
+/*Our Services Image with text formats* Solution from w3school CSS Grid Tutorial*/
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 10px;
+}
+
+.grid-item {
+    text-align: center;
+}
+/*Grid item specification*/
+.grid-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.grid-item p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+/*Contact Form Portion. sources include, Teacher's materials, Youtube, w3school, codecademy, udemy and freecodeacademy*/
+
+
+.contact-form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 500px;
+}
+.contact-form h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #000802;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out; /* Smooth transition for the transform property */
+}
+
+.contact-form button:hover {
+    background-color: #882183;
+    transform: rotate(180deg); /* Rotate the button 360 degrees on hover */
+}
+
+      .vertical-menu{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(55, 55, 255);
+        padding: 20px;
+        text-decoration: solid;
+      }
+      
